@@ -2,11 +2,11 @@
 # Selling Price Prediction for cars
 
 - [Selling Price prediction for cars](#price-prediction-of-used-cars)
-=======
+
 # Price Prediction of cars
 
 - [Selling Price Prediction of cars](#price-prediction-of-cars)
->>>>>>> 6166a532c6a59798721d41611b0f9613c941fb03
+
  
   - [Overview](#overview)
     - [Dataset Descrption](#dataset-descrption)
@@ -44,11 +44,10 @@ The provide raw data contais following features-
 - **seats**: Number of seats are availabe to a car
 
 This raw dataset is required to be processed on a set of given requirements. 
-<<<<<<< HEAD
+
 After fulfilling all the dataset processing requirements, the final data distribution is looked like the following figures-
-=======
+
 After processing the final data distribution is looked like the following figures-
->>>>>>> 6166a532c6a59798721d41611b0f9613c941fb03
 
 **The Raw Dataset**
 ![](snapshots/raw_dataset.png)
