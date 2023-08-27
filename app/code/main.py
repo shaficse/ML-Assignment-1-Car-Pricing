@@ -86,7 +86,7 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     transmission = np.float64(transmission)
     
     # Make prediction using the model
-    input_feature = np.array([[km_driven, age, engine_size,fuel,transmission]]).reshape(1,-1) 
+    input_feature = np.array([[km_driven, age, engine_size,fuel,transmission]])
     print(input_feature.shape)
     prediction = model.predict(input_feature)[0]
     prediction = np.exp(prediction)
