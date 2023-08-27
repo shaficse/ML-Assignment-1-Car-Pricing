@@ -18,19 +18,19 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 app.layout = dbc.Container([
     dbc.Row([
         html.Div([
-            dbc.Label("Year (eg. 2020)"),
+            dbc.Label("Year of Car Made (eg. 2020)"),
             dbc.Input(id="year", type="number", placeholder="Enter the Car Model Year"),
             html.Br(),
-            dbc.Label("Number of KM Drived (eg. 450000 km)"),
+            dbc.Label("Number of km Drived (eg. 450000 km)"),
             dbc.Input(id="km_driven", type="number", placeholder="Enter KM drived"),
             html.Br(),
-            dbc.Label("Engine size (eg. 1248 CC)"),
+            dbc.Label("Size of Engine(eg. 1248 CC)"),
             dbc.Input(id="engine_size", type="number", placeholder="Enter Engine size (in CC)"),
             html.Br(),
-            dbc.Label("Fuel Type "),
+            dbc.Label("Type of Fuel"),
             dcc.Dropdown(['Petrol', 'Diesel'], id='fuel_dropdown'),
             html.Br(),
-            dbc.Label("Transmission Type "),
+            dbc.Label("Type of Transmission"),
             dcc.Dropdown(['Manual', 'Automatic'], id='transmission_dropdown'),
             html.Br(),
             dbc.Button(id="submit", children="Predict", color="primary"),
@@ -91,8 +91,11 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     prediction = model.predict(input_feature)[0]
     prediction = np.exp(prediction)
     if age == 7.137924897668625 and km_driven == 70029.87346502936 and engine_size == 1463.855626715462 and fuel == 0 and transmission == 1:
-        return   f"Predicted Selling-Price: {prediction:.2f} (** Setting All values to their mean value)"
-    return f"Predicted Selling-Price: {prediction:.2f}"
+        predictedText = f"Predicted Selling Price: {prediction:.2f}"
+        predictedText += "(** Setting All the features to their mean value)"
+        return  predictedText
+    predictedText = f"Predicted Selling Price: {prediction:.2f}"
+    return predictedText
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True)
