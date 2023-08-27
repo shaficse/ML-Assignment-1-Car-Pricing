@@ -20,9 +20,9 @@ app.layout = dbc.Container([
         dcc.Markdown('''
         ## How Prediction Works
         
-        - To predict the selling price of a used car, please provide the required inputs
-        - Click the "Predict" button. The app will then use a trained model to predict the selling price based on the provided inputs
-        - If you would like to see a prediction with default values (mean values), simply click the "Predict" button.
+        - **To predict the selling price of a used car, please provide the required inputs**
+        - **Click the "Predict" button. The app will then use a trained model to predict the selling price based on the provided inputs**
+        - **If you would like to see a prediction with default values of the required inputs, simply click the "Predict" button**
         ''')
     ]),
     dbc.Row([
