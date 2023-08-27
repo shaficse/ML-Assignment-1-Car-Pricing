@@ -1,6 +1,6 @@
-# Selling Price Prediction for cars
+# Price prediction of used cars
 
-- [Selling Price prediction for cars](#price-prediction-of-used-cars)
+- [Selling Price prediction of used cars](#price-prediction-of-used-cars)
  
   - [Overview](#overview)
     - [Dataset Descrption](#dataset-descrption)
@@ -37,14 +37,8 @@ The provide raw data contais following features-
 - **torque**:if an engine has a lot of torque, the car can accelerate more quickly.
 - **seats**: Number of seats are availabe to a car
 
-This raw dataset is required to be processed on a set of given requirements. 
-After fulfilling all the dataset processing requirements, the final data distribution is looked like the following figures-
-
-**The Raw Dataset**
-![](snapshots/raw_dataset.png)
-
-The  Dataset after fulfilling all the processing requirements 
-![](snapshots/after_processing_with_data_processing_conditions.png)
+This raw dataset is required to be processed on given preporessing conditions. 
+After processing the final data distribution is looked like the following figures-
 
 
 **Categorical data distribution**
