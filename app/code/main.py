@@ -69,10 +69,10 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
         km_driven = 70029.87346502936 #initialized by mean of km_driven
     if engine_size is None:
         engine_size = 1463.855626715462 #initialized by mean of engine_size
-    if fuel is None or fuel == "Petrol":
+    if fuel is None or fuel == "Diesel":
         fuel = 0 #initialized by Diesel type if no input
     else:
-        fuel = 0
+        fuel = 1
     if transmission is None  or transmission == "Manual": 
         transmission = 1            #initialized by Manual type if no input
     else:
@@ -90,8 +90,8 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     print(input_feature.shape)
     prediction = model.predict(input_feature)[0]
     prediction = np.exp(prediction)
-    if age == 7.137924897668625 and km_driven == 70029.87346502936 and engine_size == 1463.855626715462 and fuel == 1 and transmission == 1:
-        return   f"Predicted Selling-Price: {prediction:.2f} (** Setting All values to their mean)"
+    if age == 7.137924897668625 and km_driven == 70029.87346502936 and engine_size == 1463.855626715462 and fuel == 0 and transmission == 1:
+        return   f"Predicted Selling-Price: {prediction:.2f} (** Setting All values to their mean value)"
     return f"Predicted Selling-Price: {prediction:.2f}"
 # Run the app
 if __name__ == '__main__':
