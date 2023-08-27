@@ -1,6 +1,6 @@
-# Price prediction of used cars
+# Price Prediction of cars
 
-- [Selling Price prediction of used cars](#price-prediction-of-used-cars)
+- [Selling Price Prediction of cars](#price-prediction-of-cars)
  
   - [Overview](#overview)
     - [Dataset Descrption](#dataset-descrption)
@@ -37,7 +37,7 @@ The provide raw data contais following features-
 - **torque**:if an engine has a lot of torque, the car can accelerate more quickly.
 - **seats**: Number of seats are availabe to a car
 
-This raw dataset is required to be processed on given preporessing conditions. 
+This raw dataset is required to be processed on a set of given requirements. 
 After processing the final data distribution is looked like the following figures-
 
 
@@ -48,7 +48,7 @@ After processing the final data distribution is looked like the following figure
 
 ##  key technical aspects 
 
-After thorough data exploration and visualization, several data preprocessing steps were chosen to prepare the dataset for modeling. Here are some notable aspects of the process:
+After thorough data exploration and visualization, several data preprocessing steps are chosen to prepare the dataset for modeling. Here are some notable aspects of the process:
 
 - The feature ```name``` was renamed to ```brand```, and since there were 32 unique car brands in the dataset, we dropped the ```brand``` feature due to the high number of categories compared to the dataset size.
 
