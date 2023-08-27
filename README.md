@@ -1,24 +1,26 @@
 # Price prediction of used cars
 
-- [Price prediction of used cars](#price-prediction-of-used-cars)
+- [Selling Price prediction of used cars](#price-prediction-of-used-cars)
  
   - [Overview](#overview)
     - [Dataset Descrption](#dataset-descrption)
   - [key technical aspects](#key-technical-aspects)
   - [Best Model selection](#best-model-selection)
     - [Metric](#metric)
-    - [Parameter search space](#parameter-search-space)
-    - [Best parametes](#Best-parametes)
-    - [Evaluation](#Evaluation) 
+    - [Best parametes](#best-parametes)
+    - [Evaluation](#evaluation) 
     - [Feature importances](#feature-importances)
-  - [Falsk App Deployment](#falsk-app-deployment)
-  - [Technologies Used](#technologies-used)
+   - [Environment Setup](#environment-setup)
 
 
 ## Overview
+
+
 In this assignment, We need to predict the **selling price for a car** . Finally, we also need to prepare a simple web-based car selling price prediction system for deployment.
 
 ### Dataset Descrption
+
+
 The provide raw data contais following features- 
 
 - **name** : Brand name of the Car
@@ -35,10 +37,15 @@ The provide raw data contais following features-
 - **torque**:if an engine has a lot of torque, the car can accelerate more quickly.
 - **seats**: Number of seats are availabe to a car
 
-This raw dataset is required to be processed on given preporessing conditions.
+This raw dataset is required to be processed on given preporessing conditions. 
+After processing the final data distribution is looked like the following figures-
+
+
 ![](snapshots/Categorical_data_dis.png)
 
 ![](snapshots/numerical-data-dist.png)
+
+
 ##  key technical aspects 
 
 After thorough data exploration and visualization, several data preprocessing steps were chosen to prepare the dataset for modeling. Here are some notable aspects of the process:
@@ -59,6 +66,8 @@ After thorough data exploration and visualization, several data preprocessing st
 -  To ensure consistent scaling, the numerical features in both the training and testing sets were standardized using the ```StandardScaler``` from ```sklearn.preprocessing ```module. Standardization helps models perform better by ensuring that features are on a similar scale.
 
 These technical aspects represent the key steps taken to preprocess the data and prepare it for various regression algorithms. The steps were chosen based on data characteristics, domain knowledge, and best practices to ensure optimal model performance.
+
+The Correlation Matrix of the various features- 
 ![](snapshots/corelation-matrix.png)
 
 
@@ -73,15 +82,18 @@ The data is trained on Linear Regression, SVM, KNeighbors Regressor, Decision-Tr
 * **Mean Squared Error** (MSE) is used as metric.
 * MSE measures the average squared difference between the predicted and actual values. It gives us an idea of how close the predicted values are to the actual values. Lower MSE indicates better model performance.
 
+
+
 ### Best parametes
 
 ``` {'bootstrap': True, 'max_depth': 10, 'n_estimators': 84}```
 
 These hyperparameters are determined using grid search with cross-validation, and they represent the configuration that yielded the best performance for the RandomForest Regressor model on our dataset.
 
+
 ### Evaluation
 
-- The training accuracy of Mean Squared Error (MSE) is 0.072, while the test accuracy is approximately 0.070. 
+- **The training accuracy of Mean Squared Error (MSE) is 0.072, while the test accuracy is approximately 0.070.** 
 
 It seems like the model is performing consistently well on both the training and test datasets, which indicates that the model is not overfitting to the training data. This suggests that the model's performance on new, unseen data is also good, making it a reliable predictor for the selling prices of cars based on the selected features.
 
@@ -103,9 +115,39 @@ It seems like the model is performing consistently well on both the training and
 
 
 
-## Dash App Deployment 
 
-All the files reqiured for setting up Dash deployment are in ```app``` folder along with the dependencis are in a dockerfile and composer. To deploy app locally, Please clone the git repo to local system and execute the following commands in your terminal setting project folder as working directory.
+### Environment Setup
+
+
+To set up the environment for running the car selling price prediction Assignment, follow these steps:
+ 1. Install Python 3: Ensure  Python version 3.8.17 
+ 2. Install Required Packages
+ ```pip install numpy==1.24.3
+    pip install pandas==1.5.3
+    pip install seaborn==0.12.2
+    pip install matplotlib==3.7.2
+    pip install scikit-learn==1.2.2
+    pip install dash
+    pip install dash_bootstrap_components
+```
+
+### Dash App Deployment 
+
+All the files reqiured for setting up Dash deployment are in ```app/code``` folder along with the dependencis are in a dockerfile and composer. To deploy app locally, Please clone the git repo to local system and execute the following commands in your terminal setting project folder as working directory.
+
+ ```
+ python main.py
+ ```
+
+ Then, access the Dash Application: Once the script is running, open a web browser and visit http://localhost:8050/ to access the car selling price prediction web application.
+
+
+ ![](snapshots/dash_web_application.png)
+
+
+
+ ### Docker Compose to run the app in a Docker container
+Need to open terminal or command prompt and navigate to ```app`` directory where the docker-compose.yml and Dockerfile are located.
 
 ``````sh
 docker compose up --build
