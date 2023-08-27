@@ -72,7 +72,7 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     if engine_size is None:
         engine_size = 1463.855626715462 #initialized by mean of engine_size
     if fuel is None or fuel == "Petrol":
-        fuel = 1 #initialized by petrol type if no input
+        fuel = 0 #initialized by Diesel type if no input
     else:
         fuel = 0
     if transmission is None  or transmission == "Manual": 
