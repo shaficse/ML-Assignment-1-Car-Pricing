@@ -154,7 +154,7 @@ All the files reqiured for setting up Dash deployment are in ```app/code``` fold
  python main.py
  ```
 
- Then, access the Dash Application: Once the script is running, open a web browser and visit http://localhost:8050/ to access the car selling price prediction web application.
+ Then, access the Dash Application: Once the script is running, open a web browser and visit **http://localhost:8050/**  to access the car selling price prediction web application.
 
 
  ![](snapshots/dash_web_application.png)
@@ -166,7 +166,9 @@ Need to open terminal or command prompt and navigate to ```app`` directory where
 
 ``````sh
 docker compose up --build
-```
 
+```````
+
+```````
 Access the app with http://localhost:9001
-```
+```````
