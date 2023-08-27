@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Selling Price Prediction for cars
 
 - [Selling Price prediction for cars](#price-prediction-of-used-cars)
