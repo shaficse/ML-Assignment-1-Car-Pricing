@@ -16,8 +16,18 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 # App layout
 app.layout = dbc.Container([
+    html.Div([
+        dcc.Markdown('''
+        ## How Prediction Works
+        
+        - To predict the selling price of a used car, please provide the required inputs
+        - Click the "Predict" button. The app will then use a trained model to predict the selling price based on the provided inputs
+        - If you would like to see a prediction with default values (mean values), simply click the "Predict" button.
+        ''')
+    ]),
     dbc.Row([
         html.Div([
+            
             dbc.Label("Year of Car Made (eg. 2020)"),
             dbc.Input(id="year", type="number", placeholder="Enter the Car Model Year"),
             html.Br(),
