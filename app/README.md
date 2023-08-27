@@ -1,6 +1,6 @@
 # Dash Plotly
 
-To run this folder, you will need `Docker`, then just run this with
+To run this folder, we will need `Docker`, then just run this with
 
 ```sh
 docker compose up --build
