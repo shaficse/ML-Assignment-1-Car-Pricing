@@ -64,7 +64,6 @@ app.layout = dbc.Container([
     State(component_id="km_driven", component_property="value"),
     State(component_id="engine_size", component_property="value"),
     State( component_id="fuel_dropdown", component_property="value"),
-    # State(component_id="transmission", component_property="value"),
     State( component_id="transmission_dropdown", component_property="value"),
     Input(component_id="submit", component_property='n_clicks'),
     prevent_initial_call=True
