@@ -22,7 +22,7 @@ app.layout = dbc.Container([
         
         - **To predict the selling price of a used car, please provide the required inputs**
         - **Click the "Predict" button. The app will then use a trained model to predict the selling price based on the provided inputs**
-        - **If you would like to see a prediction with default values of the required inputs, simply click the "Predict" button**
+        - **If you leave any input blank, the missing input will be automatically filled using a training imputation technique**
         ''')
     ]),
     dbc.Row([
@@ -100,10 +100,6 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     print(input_feature.shape)
     prediction = model.predict(input_feature)[0]
     prediction = np.exp(prediction)
-    if age == 7.137924897668625 and km_driven == 70029.87346502936 and engine_size == 1463.855626715462 and fuel == 0 and transmission == 1:
-        predictedText = f"Predicted Selling Price: {prediction:.2f}"
-        predictedText += "(** Setting All the features to their mean value)"
-        return  predictedText
     predictedText = f"Predicted Selling Price: {prediction:.2f}"
     return predictedText
 # Run the app
