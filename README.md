@@ -157,7 +157,7 @@ To set up the environment for running the car selling price prediction Assignmen
 
 ### Dash App Deployment 
 
-All the files reqiured for setting up Dash deployment are in ```app/code``` directory.
+All the files reqiured for setting up Dash deployment are in ```app/code``` directory. Need to open the terminal and navigate to the directory ```app/code```. Finally run the below command.
 
  ```
  python main.py
@@ -171,7 +171,8 @@ All the files reqiured for setting up Dash deployment are in ```app/code``` dire
 
 
  ### Docker Compose to run the app in a Docker container
-Need to open terminal or command prompt and navigate to ```app`` directory where the docker-compose.yml and Dockerfile are located.
+Need to open terminal or command prompt and navigate to ```app`` directory where the docker-compose.yml and Dockerfile are located. And run the below command 
+
 
 ``````sh
 docker compose up --build
