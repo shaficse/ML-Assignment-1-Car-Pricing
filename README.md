@@ -48,8 +48,11 @@ After processing the final data distribution is looked like the following figure
 **The Raw Dataset**
 ![](snapshots/raw_dataset.png)
 
+![](snapshots/raw_Dataset_info.png)
+
 The  Dataset after fulfilling all the processing requirements 
 ![](snapshots/after_processing_with_data_processing_conditions.png)
+![](snapshots/after_processing_condition_dataset.png)
 
 
 **Categorical data distribution**
@@ -85,6 +88,9 @@ These technical aspects represent the key steps taken to preprocess the data and
 The Correlation Matrix of the features- 
 ![](snapshots/corelation-matrix.png)
 
+
+- Train (``70%``)& Test Data(``30%``) distribution
+![](snapshots/Train_Test_data_details.png)
 
 
 
