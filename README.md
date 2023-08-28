@@ -89,7 +89,10 @@ The Correlation Matrix of the features-
 ![](snapshots/corelation-matrix.png)
 
 
+
 - Train (``70%``)& Test Data(``30%``) distribution
+
+
 ![](snapshots/Train_Test_data_details.png)
 
 
