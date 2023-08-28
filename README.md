@@ -157,7 +157,7 @@ To set up the environment for running the car selling price prediction Assignmen
 
 ### Dash App Deployment 
 
-All the files reqiured for setting up Dash deployment are in ```app/code``` folder. To deploy app locally, Please clone the git repo to local system and execute the following commands in your terminal setting project folder as working directory.
+All the files reqiured for setting up Dash deployment are in ```app/code``` directory.
 
  ```
  python main.py
