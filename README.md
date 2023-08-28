@@ -91,9 +91,9 @@ The Correlation Matrix of the features-
 
 
 - Train (``70%``)& Test Data(``30%``) distribution
-
-
-![](snapshots/Train_Test_data_details.png)
+  - Total Dataset Size 8028
+  - Training Dataset Size 5619
+  - Training Dataset Size 2409
 
 
 
