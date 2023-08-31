@@ -33,7 +33,7 @@ app.layout = dbc.Container([
         
         - **To predict the selling price of a used car, please provide the required inputs**
         - **Click the "Predict" button. The app will then use a trained model to predict the selling price based on the provided inputs**
-        - **If you leave any input blank, the missing input will be automatically filled using a training imputation technique**
+        - **If you leave any input blank, the missing input will be automatically filled using a imputation technique**
         ''')
     ]),
     dbc.Row([
