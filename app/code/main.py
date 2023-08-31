@@ -84,7 +84,7 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     if year is None:
         age = 7.137924897668625 #initialized by mean of age
     else:
-        age = 2020+1 - year  #calculating age as the same way was done in training
+        age = abs(2020+1 - year)  #calculating age as the same way was done in training  ( age_of_car = [ max_year_of_data_set + 1 - year_of_car_model ] )
     if km_driven is None:
         km_driven = 70029.87346502936 #initialized by mean of km_driven
     if engine_size is None:
