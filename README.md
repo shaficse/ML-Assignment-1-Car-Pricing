@@ -23,7 +23,7 @@ In this assignment, We need to predict the **selling price for a car** . Finally
 ### Dataset Descrption
 
 
-The provide raw data contais following features- 
+The provide raw data contains following features- 
 
 - **name** : Brand name of the Car
 - **Year** : Year of the car made
