@@ -4,11 +4,22 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 import pickle
 import numpy as np
+from sklearn.preprocessing import StandardScaler
 
 
 #Load Model
 model_path = "model/car_prediction_MSE_0.072.model"
 model = pickle.load(open(model_path, 'rb'))
+
+# load the scaling parameters
+scaler_path = "model/scaler.pkl"
+loaded_scaler_params = pickle.load(open(scaler_path, 'rb'))
+
+# Create scaler with the loaded parameters
+loaded_scaler = StandardScaler()
+loaded_scaler.mean_ = loaded_scaler_params['mean']
+loaded_scaler.scale_ = loaded_scaler_params['scale']
+
 
 # Initialize the app - incorporate a Dash Bootstrap theme
 external_stylesheets = [dbc.themes.CERULEAN]
@@ -96,6 +107,8 @@ def Predict_Life_Expectancy(year, km_driven, engine_size, fuel, transmission, su
     
     # Make prediction using the model
     input_feature = np.array([[km_driven, age, engine_size,fuel,transmission]])
+    # Transform the first 3 features
+    input_feature[:, :3] = loaded_scaler.transform(input_feature[:, :3]) 
     print(input_feature.shape)
     prediction = model.predict(input_feature)[0]
     prediction = np.exp(prediction)
